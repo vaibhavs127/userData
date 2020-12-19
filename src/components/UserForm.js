@@ -11,7 +11,7 @@ const UserForm = (props) => {
     salary: "",
   };
 
-  var [values, setValues] = useState(initialFieldValues);
+  const [values, setValues] = useState(initialFieldValues);
 
   useEffect(() => {
     if (props.currentId == "") setValues({ ...initialFieldValues });

@@ -3,10 +3,9 @@ import ContactForm from "./UserForm";
 import firebaseDb from "../firebase";
 
 const User = () => {
-  var [currentId, setCurrentId] = useState("");
-  var [contactObjects, setContactObjects] = useState({});
+  const [currentId, setCurrentId] = useState("");
+  const [contactObjects, setContactObjects] = useState({});
 
-  //Once components load complete
   useEffect(() => {
     firebaseDb.child("User").on("value", (snapshot) => {
       if (snapshot.val() != null) {
